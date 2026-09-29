@@ -151,7 +151,7 @@
                 android:id="@+id/btnWebView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="WebView"
+                android:text="Web View"
                 android:layout_marginTop="20dp"
                 app:icon="@drawable/ic_back"
                 app:iconGravity="textEnd"/>
