@@ -10,6 +10,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.laukhil_mobile1.databinding.ActivityMainBinding
 import com.example.laukhil_mobile1.pertemuan4.FourthActivity
+import com.example.laukhil_mobile1.pertemuan5.FifthActivity
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -35,6 +36,10 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
 
             Toast.makeText(this, "Berhasil berpindah ke FourthActivity", Toast.LENGTH_SHORT).show()
+        }
+        binding.btnToFifth.setOnClickListener {
+            val intent = Intent(this, FifthActivity::class.java)
+            startActivity(intent)
         }
     }
         override fun onStart() {
