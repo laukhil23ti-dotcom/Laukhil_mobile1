@@ -44,13 +44,13 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        binding.btnLogout.setOnClickListener {
-            AlertDialog.Builder(this)
-                .setTitle("Konfirmasi Logout")
-                .setMessage("Apakah Anda yakin ingin keluar?")
-                .setIcon(android.R.drawable.ic_dialog_alert)
-                .setPositiveButton("Ya") { dialog, _ ->
-                    // 1. Hapus session SharedPreferences
+            binding.btnLogout.setOnClickListener {
+                AlertDialog.Builder(this)
+                    .setTitle("Konfirmasi Logout")
+                    .setMessage("Apakah Anda yakin ingin keluar?")
+                    .setIcon(android.R.drawable.ic_dialog_alert)
+                    .setPositiveButton("Ya") { dialog, _ ->
+                        // 1. Hapus session SharedPreferences
                     val sharedPreferences = getSharedPreferences("user_pref", Context.MODE_PRIVATE)
                     val editor = sharedPreferences.edit()
                     editor.clear()

@@ -36,6 +36,14 @@
         <activity android:name=".FifthActivity" />
         <activity android:name=".WebViewActivity" />
         <activity
+            android:name=".NinthActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".pertemuan9.NinthActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
             android:name=".pertemuan6.SixthActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />

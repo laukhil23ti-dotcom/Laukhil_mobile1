@@ -12,6 +12,7 @@ import androidx.fragment.app.Fragment
 import com.example.laukhil_mobile1.AuthActivity
 import com.example.laukhil_mobile1.FifthActivity
 import com.example.laukhil_mobile1.FourthActivity
+import com.example.laukhil_mobile1.NinthActivity
 import com.example.laukhil_mobile1.pertemuan6.SixthActivity
 import com.example.laukhil_mobile1.databinding.FragmentHomeBinding
 
@@ -47,6 +48,11 @@ class HomeFragment : Fragment() {
 
         binding.btnToSixth.setOnClickListener {
             val intent = Intent(requireContext(), SixthActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.btnToNinth.setOnClickListener {
+            val intent = Intent(requireContext(), NinthActivity::class.java)
             startActivity(intent)
         }
 

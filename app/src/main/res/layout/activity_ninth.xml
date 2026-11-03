@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".NinthActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="32dp">
+
+        <!-- 3. Custom Vector Header Background (Wave) -->
+        <View
+            android:id="@+id/headerWave"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:background="@drawable/bg_header_wave"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Pertemuan 9 &amp; 10"
+            android:textColor="#FFFFFF"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- 2. Form & Material Components: TextInputLayout & MaterialButton -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutEmail"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="32dp"
+            android:hint="Email"
+            app:counterEnabled="true"
+            app:counterMaxLength="50"
+            app:helperText="Masukkan email aktif Anda"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/headerWave"
+            app:startIconDrawable="@drawable/ic_email">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="16dp"
+            android:text="Login"
+            app:cornerRadius="12dp"
+            app:icon="@drawable/ic_login"
+            app:iconGravity="textStart"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textInputLayoutEmail" />
+
+        <!-- 2. Chip & ChipGroup -->
+        <TextView
+            android:id="@+id/tvFilterTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:text="Pilih Filter:"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnLogin" />
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipGroupFilter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="8dp"
+            app:singleSelection="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvFilterTitle">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipTerbaru"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Terbaru" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipPenting"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Penting" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipBelumDibaca"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Belum Dibaca" />
+        </com.google.android.material.chip.ChipGroup>
+
+        <!-- 4. Layout Grid 6 Tombol -->
+        <TextView
+            android:id="@+id/tvGridTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:text="Menu Utama (GridLayout 3 Kolom):"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/chipGroupFilter" />
+
+        <androidx.gridlayout.widget.GridLayout
+            android:id="@+id/gridLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="8dp"
+            app:columnCount="3"
+            app:useDefaultMargins="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvGridTitle">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnMenu1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Menu 1"
+                app:layout_columnWeight="1"
+                app:layout_gravity="fill_horizontal" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnMenu2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Menu 2"
+                app:layout_columnWeight="1"
+                app:layout_gravity="fill_horizontal" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnMenu3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Menu 3"
+                app:layout_columnWeight="1"
+                app:layout_gravity="fill_horizontal" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnMenu4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Menu 4"
+                app:layout_columnWeight="1"
+                app:layout_gravity="fill_horizontal" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnMenu5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Menu 5"
+                app:layout_columnWeight="1"
+                app:layout_gravity="fill_horizontal" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnMenu6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Menu 6"
+                app:layout_columnWeight="1"
+                app:layout_gravity="fill_horizontal" />
+        </androidx.gridlayout.widget.GridLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

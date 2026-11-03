@@ -10,7 +10,7 @@ import com.example.laukhil_mobile1.R
 import com.example.laukhil_mobile1.databinding.ActivityBaseBinding
 import com.example.laukhil_mobile1.pertemuan6.home.HomeFragment
 import com.example.laukhil_mobile1.pertemuan6.message.MessageFragment
-import com.example.laukhil_mobile1.pertemuan6.more.MoreFragment
+import com.example.laukhil_mobile1.pertemuan6.more.FragmentMore
 
 class BaseActivity : AppCompatActivity() {
     private lateinit var binding: ActivityBaseBinding
@@ -35,7 +35,7 @@ class BaseActivity : AppCompatActivity() {
             when (item.itemId) {
                 R.id.nav_home -> { replaceFragment(HomeFragment()); true }
                 R.id.nav_message -> { replaceFragment(MessageFragment()); true }
-                R.id.nav_more -> { replaceFragment(MoreFragment()); true }
+                R.id.nav_more -> { replaceFragment(FragmentMore()); true }
                 else -> false
             }
         }
