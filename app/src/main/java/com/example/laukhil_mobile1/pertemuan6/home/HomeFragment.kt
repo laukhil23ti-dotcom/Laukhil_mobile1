@@ -13,6 +13,8 @@ import com.example.laukhil_mobile1.AuthActivity
 import com.example.laukhil_mobile1.FifthActivity
 import com.example.laukhil_mobile1.FourthActivity
 import com.example.laukhil_mobile1.NinthActivity
+import com.example.laukhil_mobile1.pertemuan11.OnboardingActivity
+import com.example.laukhil_mobile1.pertemuan11.TabPagerActivity
 import com.example.laukhil_mobile1.pertemuan6.SixthActivity
 import com.example.laukhil_mobile1.databinding.FragmentHomeBinding
 
@@ -53,6 +55,16 @@ class HomeFragment : Fragment() {
 
         binding.btnToNinth.setOnClickListener {
             val intent = Intent(requireContext(), NinthActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.btnToOnboarding.setOnClickListener {
+            val intent = Intent(requireContext(), OnboardingActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.btnToTabPager.setOnClickListener {
+            val intent = Intent(requireContext(), TabPagerActivity::class.java)
             startActivity(intent)
         }
 

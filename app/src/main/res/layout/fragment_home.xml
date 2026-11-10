@@ -68,12 +68,32 @@
         android:layout_marginTop="16dp"/>
 
     <Button
+        android:id="@+id/btnToOnboarding"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ke Onboarding (Pertemuan 11)"
+        app:layout_constraintTop_toBottomOf="@id/btnToNinth"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <Button
+        android:id="@+id/btnToTabPager"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ke Tab + ViewPager2 (Pertemuan 11)"
+        app:layout_constraintTop_toBottomOf="@id/btnToOnboarding"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <Button
         android:id="@+id/btnLogout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Logout"
         android:backgroundTint="#D32F2F"
-        app:layout_constraintTop_toBottomOf="@id/btnToNinth"
+        app:layout_constraintTop_toBottomOf="@id/btnToTabPager"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="24dp"/>

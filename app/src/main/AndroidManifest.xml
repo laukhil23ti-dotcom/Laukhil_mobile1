@@ -31,6 +31,16 @@
             android:name=".MainActivity"
             android:exported="false" />
 
+        <!-- Pertemuan 11 -->
+        <activity
+            android:name=".pertemuan11.OnboardingActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".pertemuan11.TabPagerActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
         <!-- Activity lainnya -->
         <activity android:name=".FourthActivity" />
         <activity android:name=".FifthActivity" />
